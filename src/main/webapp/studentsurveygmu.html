@@ -1,0 +1,155 @@
+<!--A HTML page that contains the student survey form and allows the user to enter survey data.
+It contains a datalist, textboxes, radio buttons, checkboxes, and a drop down menu. At the bottom, you'll find a submit and a reset button. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>STUDENT SURVEY GMU</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- CS Department logo section-->
+	<div id="csdept-logo">
+		<h1>
+			<a class="img-link" href="https://www.gmu.edu"> <img class="img-logo" src="images/gmu_logo.png" alt="George Mason University Computer Science Department" align="center" width="50%"> 
+			</a>
+		</h1>
+	</div>
+	<h1>
+		<center>STUDENT SURVEY GMU</center>
+	</h1>
+	<div class= "w3-container">
+	<section id="survey">
+			<p>
+				<em>Please provide us your feedback. Your feedback is greatly appreciated.</em>
+			</p>
+			<!-- Within a web form, the <fieldset> HTML element is used to group several controls as well as labels (label>)-->
+			<form autocomplete="on" action="index.html" method="post">
+				<fieldset>
+					<legend>User Information</legend>
+					<table class="w3-table">
+						<tr>
+                            <td>
+                                <label>First Name *</label>
+                            </td>
+                            <td>
+                                <input id="username" type="text" placeholder="Enter your First Name" autocomplete="on" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Last Name *</label>
+                            </td>
+                            <td>
+                                <input id="Lastname" type="text" placeholder="Enter your Last Name" autocomplete="on" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Street Address *</label>
+                            </td>
+                            <td>
+                                <input id="address" placeholder="XXXX Your St" type="text" required />
+                            </td>
+                        </tr>
+						<tr>
+							<td><label>City *</label></td>
+							<td><input id="city" type="text" required /></td>
+						</tr>
+						<tr>
+							<td><label>State *</label></td>
+							<td><input id="state" type="text" required/></td>
+						</tr>
+						<tr>
+                            <td><label for="zipcode">Zipcode * </label></td>
+                            <td><input type="number" class="form-control" id="zipcode" placeholder="Zipcode" required></td>
+                        </tr>
+						<tr>
+							<td><label>Telephone No. *</label></td>
+							<td><input id="telephone" type="tel"
+								required placeholder="(xxx) xxx-xxxx"/></td>
+						</tr>
+						<tr>
+                            <td>
+                                <label>Email Id. *</label>
+                            </td>
+                            <td>
+                                <input id="email" type="text" required />
+                            </td>
+                        </tr>
+						<tr>
+							<td><label>Date of Survey *</label></td>
+							<td><input id="date" type="date" placeholder="MM/DD/YYYY" required/></td>
+						</tr>
+					</table>
+				</fieldset>
+
+				<fieldset>
+					<legend>Feedback</legend>
+					<table class="w3-table">
+						<tr>
+							<td><label>What was it about GMU that you liked the most? </label></td>
+							<td><label><input name="liked" type="checkbox" value="0"/>Students</label>
+								 <label><input name="liked" type="checkbox" value="1" />Location</label> 
+								 <label><input name="liked" type="checkbox" value="2" />Campus</label> 
+								 <label><input name="liked" type="checkbox" value="3" />Atmosphere</label> 
+								 <label><input name="liked" type="checkbox" value="4" />Dorm Rooms</label> 
+								<label><input name="liked" type="checkbox" value="5" />Sports</label>
+							</td>
+						</tr>
+						<tr>
+							<td><label>Which of the following piqued your interest in GMU the most? </label></td>
+							<td><label><input name="interest" type="radio" value="friends" />Friends</label>
+								<label><input name="interest" type="radio" value="television" />Television</label>
+								<label><input name="interest" type="radio" value="internet"  />Internet</label>
+								<label><input name="interest" type="radio" value="other" />Other</label>
+							</td>
+						</tr>
+						<tr>
+							<td><label>Additional Comments</label></td>
+							<td><textarea name="other" rows="3"></textarea></td>
+						</tr>
+						<tr>
+							<td><label>What is your likelihood of recommending GMU to others? </label></td>
+							<td><select id="recommend" >
+									<option>--Select--</option>
+									<option>Very Likely</option>
+									<option>Likely</option>
+									<option>Unlikely</option>
+							</select></td>
+						</tr>
+					</table>
+				</fieldset>
+                <!-- Raffle section -->
+				<fieldset>
+					<legend>Chance to win a movie ticket!!!</legend>
+                    <table class="w3-table">
+                        <tr>
+                            <td>
+                                <label>Raffle</label>
+                            </td>
+                            <td>
+                                <input id="raffle" type="text" placeholder="Enter atleast 10 numbers"/>
+                            </td>
+                        </tr>
+                    </table>
+				</fieldset>
+				<br>
+				<div class="w3-container">
+				 <input type="submit" class="w3-button w3-green" value="Submit" />
+				<input type="reset" class="w3-button w3-yellow" value="Cancel" />
+			</div>
+
+			</form>
+			<h6>* marked fields are mandatory</h6>
+			<!-- footer -->
+			<footer class="m_my-5 m_pt-5 m_text-muted m_text-small w3-container w3-padding-64 w3-center">
+				<div class="error-footer">
+        Manankumar Thakkar | SWE 645 : Homework 1 | Date: 09/03/2022
+        </div>
+			</footer>
+</body>
+</html>

@@ -13,7 +13,7 @@ pipeline {
         stage('Build Docker Image'){
             steps{
                 script{
-                    def customImage = docker.build("manan98/swe645:${env.BUILD_NUMBER}")
+                    docker.build("manan98/swe645:${env.BUILD_NUMBER}")
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
 		stage("Deploying to Kubernetes"){
 			steps{
 				script{
-					sh "kubectl set image deployment swe645=manan98/swe645:${env.BUILD_NUMBER}"
+					sh "kubectl set image deployment/swe645 swe645=manan98/swe645:${env.BUILD_NUMBER}"
 				}
 			}
 		}
